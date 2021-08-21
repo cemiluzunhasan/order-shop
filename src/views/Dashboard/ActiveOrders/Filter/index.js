@@ -1,10 +1,10 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { Drawer, Input, Menu } from "antd";
 import { MenuFoldOutlined } from '@ant-design/icons';
 import menuItems from "components/Layout/Sider/menuItems";
 
 import styles from '../styles.module.less';
-import { useHistory } from "react-router-dom";
 
 const Filter = () => {
 
@@ -28,7 +28,7 @@ const Filter = () => {
         visible={visible}
         onClose={() => setVisible(false)}
       >
-        <Menu mode="inline" defaultSelectedKeys={menuItems[0].name}>
+        <Menu mode="inline" className={styles.hamburger_menu} defaultSelectedKeys={menuItems[0].name}>
           {menuItems.map(x =>
             <Menu.Item key={x.name} onClick={() => onClickMenuItem(x)}>
               {x.text}
