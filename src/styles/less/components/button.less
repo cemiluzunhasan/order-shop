@@ -1,0 +1,20 @@
+.ant-btn {
+  font-size    : 15px;
+  font-weight  : bold;
+  padding      : 10px;
+  height       : auto !important;
+  border       : none !important;
+  box-shadow   : none !important;
+  border-radius: 11px;
+  white-space  : normal;
+
+  &-info {
+    color           : @colors[white];
+    background-color: @colors[blue];
+
+    &:hover {
+      color           : @colors[white];
+      background-color: lighten(@colors[blue], 10%);
+    }
+  }
+}

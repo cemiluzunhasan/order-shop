@@ -1,0 +1,54 @@
+.container {
+  background   : #FFFFFF;
+  padding      : 50px 40px 20px 40px;
+  border-radius: 12px;
+
+  .table_name {
+    margin-bottom: 15px;
+    color        : #707070;
+  }
+
+  .order_name {
+    text-align: right;
+    color     : #707070;
+  }
+
+  .date {
+    color        : #707070;
+    font-size    : 12px;
+    margin       : 0;
+    line-height  : 1;
+    margin-bottom: 30px;
+  }
+
+  .product {
+
+    &_name,
+    &_quantity {
+      margin-bottom: 0;
+      font-size    : 20px;
+      color        : #707070;
+    }
+
+    &_quantity {
+      text-align: right;
+    }
+
+    &_notes {
+      font-size    : 16px;
+      color        : #707070;
+      margin-bottom: 0;
+    }
+  }
+
+  .btn_container {
+    width          : 100%;
+    display        : flex;
+    justify-content: flex-end;
+  }
+
+  .btn {
+    margin-top: 40px;
+    width     : 100% !important;
+  }
+}

@@ -1,0 +1,47 @@
+.ant-layout {
+  &-header {
+    position: fixed;
+    height  : 68px;
+    width   : 100%;
+    z-index : 2;
+  }
+
+  &-sider {
+    overflow-y: scroll;
+    height    : 100vh;
+    position  : fixed !important;
+    left      : 0;
+    box-shadow: 0px 3px 6px 0 lighten(#000000, 90%);
+
+    &-children {
+      display        : flex;
+      flex-direction : column;
+      justify-content: space-between;
+      padding-left   : 67px;
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &-content {
+    min-height: calc(100vh - 138px) !important;
+    margin    : 50px 16px 0;
+    overflow  : initial;
+    background: #F7F7F7;
+  }
+}
+
+.logo {
+  width     : 200px;
+  margin-top: 30px;
+}
+
+.site-layout {
+  margin-left: 422px;
+
+  @media (max-width: 1200px) {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,33 @@
+.ant-menu {
+  &-inline {
+    border: 0;
+  }
+
+  &-item {
+    padding-left : 0 !important;
+    padding-right: 0px !important;
+
+    &:not(&-selected) {
+      padding-left: 27px !important;
+    }
+
+    &-selected {
+      &::before {
+        content         : ' ';
+        width           : 20px;
+        height          : 20px;
+        background-color: @colors[yellow];
+        margin-right    : 7px;
+      }
+
+      &::after {
+        border-width: 7px !important;
+        transform   : scaleY(0.5) !important;
+      }
+
+      .ant-menu-title-content {
+        color: @colors[black];
+      }
+    }
+  }
+}

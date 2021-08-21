@@ -1,0 +1,52 @@
+.container {
+  margin-left: 60px;
+
+  @media (max-width: 1200px) {
+    margin-left: 0;
+  }
+}
+
+.filter {
+  margin-bottom  : 70px;
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+
+
+  .btn_hamburger {
+    display: none;
+
+    @media (max-width: 1200px) {
+      display: inline-block;
+    }
+  }
+
+  &_input {
+    padding      : 25px !important;
+    width        : 370px !important;
+    border       : 0 !important;
+    font-size    : 18px !important;
+    border-radius: 22px !important;
+    font-style   : italic;
+
+    &::placeholder {
+      color: #707070 !important;
+    }
+
+    @media (max-width: 400px) {
+      width: 80% !important;
+    }
+  }
+
+  &_results {
+    .ant-row {
+      width: 100%;
+    }
+  }
+}
+
+.anticon-menu-fold {
+  * {
+    font-size: 20px !important;
+  }
+}
