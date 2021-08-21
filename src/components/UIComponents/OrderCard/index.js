@@ -28,7 +28,7 @@ const OrderCard = ({ item }) => {
             </Row>
           ))}
         </Col>
-        <Col xxl={{ span: 12, offset: 12 }} xl={{ span: 15, offset: 9 }} lg={{ span: 12, offset: 12 }} md={{ span: 24 }} className={styles.btn_container}>
+        <Col xxl={{ span: 15, offset: 9 }} xl={{ span: 15, offset: 9 }} lg={{ span: 12, offset: 12 }} md={{ span: 24 }} className={styles.btn_container}>
           <Button type="info" className={styles.btn}>Mark as completed</Button>
         </Col>
       </Row>
