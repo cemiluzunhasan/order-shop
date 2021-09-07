@@ -1,7 +1,22 @@
+import { useCallback } from 'react';
 import { Row, Col, Divider, Button } from 'antd';
 import styles from './styles.module.less';
 
-const OrderCard = ({ item }) => {
+/*
+ * type: completed || uncompleted  
+*/
+const OrderCard = ({ item, type }) => {
+
+  const Action = useCallback(() => {
+    if (type === 'active') {
+      return <Button type="info" className={styles.btn}>Mark as completed</Button>
+    } else if (type === 'completed') {
+      return <Button type="danger" className={styles.btn}>Mark as uncompleted</Button>
+    } else {
+      return <Button type="info" className={styles.btn}>Mark as completed</Button>
+    }
+  }, [type]);
+
   return (
     <div className={styles.container}>
       <Row>
@@ -29,7 +44,7 @@ const OrderCard = ({ item }) => {
           ))}
         </Col>
         <Col xxl={{ span: 15, offset: 9 }} xl={{ span: 15, offset: 9 }} lg={{ span: 12, offset: 12 }} md={{ span: 24 }} className={styles.btn_container}>
-          <Button type="info" className={styles.btn}>Mark as completed</Button>
+          {Action()}
         </Col>
       </Row>
     </div>

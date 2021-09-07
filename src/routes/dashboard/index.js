@@ -11,7 +11,12 @@ const dashboard = [
     path: '/active-orders',
     name: 'Active Orders',
     component: require('views/Dashboard/ActiveOrders').default
-  }
+  },
+  {
+    path: '/completed-orders',
+    name: 'Completed Orders',
+    component: require('views/Dashboard/CompletedOrders').default
+  },
 ];
 
 export default dashboard;
