@@ -23,7 +23,7 @@ const Sider = () => {
   return (
     <Layout.Sider width={422}>
       <img src="https://www.pikselmutfak.com/wp-content/uploads/2020/04/piksel-mutfak-logo-88.png" className="logo" alt="logo" />
-      <Menu mode="inline" activeKey={active}>
+      <Menu mode="inline" activeKey={active} defaultSelectedKeys={history.location.pathname}>
         {menuItems.map(x =>
           <Menu.Item key={x.path} onClick={() => onClick(x)}>
             {x.text}
